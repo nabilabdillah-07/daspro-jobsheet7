@@ -5,6 +5,7 @@ public class SiakadFor19 {
         Scanner sc = new Scanner(System.in);
 
         double nilai, tertinggi = 0, terendah = 100;
+        int jumlahLulus = 0, jumlahTidakLulus = 0; 
 
         for (int i = 1; i <= 10; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + i + ":");
@@ -14,9 +15,16 @@ public class SiakadFor19 {
             } if ( nilai < terendah) {
                 terendah = nilai;
             }
+            if (nilai >= 60) {
+                jumlahLulus++;
+            } else { 
+                jumlahTidakLulus++;
+            }
         }
         System.out.println("Nilai tertinggi:" + tertinggi);
         System.out.println("Nilai Terendah:" + terendah);
+        System.out.println("Mahasiswa Lulus:" + jumlahLulus);
+        System.out.println("Mahasiswa tidak lulus:" + jumlahTidakLulus);
         sc.close();
     }
 }
